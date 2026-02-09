@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Parents Dashboard</title>
+
+  <link rel="icon" href="insyncEdportal.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <button id="menuBtn" class="hamburger">☰</button>
+
+  <div class="header-info">
+    <h1>Insync Primary</h1>
+    <select>
+      <option>Thando Langa</option>
+      <option>Sipho Langa</option>
+    </select>
+  </div>
+
+  <div class="header-actions">
+    <button id="themeBtn" class="theme-toggle">🌙</button>
+    <button id="logoutBtn" class="logout">Logout</button>
+  </div>
+</header>
+
+<!-- APP LAYOUT -->
+<div class="app">
+
+
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <section class="status-card">
+      <h2 id="dayOfWeek"></h2>
+      <span class="present">Present</span>
+    </section>
+
+    <section class="accordion">
+      <button class="accordion-header">Notifications</button>
+      <div class="accordion-body">
+        <ul>
+          <li>School closes at 12:00 Friday</li>
+          <li>Excursion next week</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="accordion">
+      <button class="accordion-header">Homework</button>
+      <div class="accordion-body">
+        <p>Maths – Mr Dlamini</p>
+      </div>
+    </section>
+
+    <section class="accordion">
+      <button class="accordion-header">Assignments</button>
+      <div class="accordion-body">
+        <div class="assignment pending">English – Pending</div>
+        <div class="assignment done">Maths – Done</div>
+      </div>
+    </section>
+
+    <section class="accordion">
+      <button class="accordion-header">Examinations</button>
+      <div class="accordion-body">
+        <p>Natural Science – 20 March</p>
+      </div>
+    </section>
+
+    <section class="accordion">
+      <button class="accordion-header">Exam Results</button>
+      <div class="accordion-body">
+        <p>Maths – 78%</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="js/parent.js"></script>
+</body>
+</html>

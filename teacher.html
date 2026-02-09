@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Teacher Dashboard</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="insyncEdportal.png" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+  <!-- Main CSS (root folder) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <h1>Insync Primary</h1>
+      <h2 id="dayOfWeek"></h2>
+    </div>
+
+    <div class="header-right">
+      <button id="themeBtn">🌙</button>
+      <button id="logoutBtn" class="logout">Logout</button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- 1. CLASSES -->
+    <section class="accordion">
+      <button class="accordion-header">📚 Classes</button>
+      <div class="accordion-body">
+
+        <button class="sub-accordion">Maths – Grade 5</button>
+        <div class="sub-body">
+          <div class="register">
+            <span>Thando Langa</span>
+            <button class="present">Present</button>
+            <button class="absent">Absent</button>
+          </div>
+
+          <div class="homework">
+            <p>Homework given?</p>
+            <button>Yes</button>
+            <button>No</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. CREATE ASSIGNMENT -->
+    <section class="accordion">
+      <button class="accordion-header">➕ Create Assignment</button>
+      <div class="accordion-body">
+        <select>
+          <option>Select Subject / Class</option>
+          <option>Maths – Grade 5</option>
+        </select>
+
+        <input type="text" placeholder="Short description">
+        <input type="date">
+        <button class="submit">✔ Create</button>
+      </div>
+    </section>
+
+    <!-- 3. ASSIGNMENTS -->
+    <section class="accordion">
+      <button class="accordion-header">📝 Assignments</button>
+      <div class="accordion-body">
+
+        <button class="sub-accordion">Maths Homework 1</button>
+        <div class="sub-body">
+          <div class="register">
+            <span>Thando Langa</span>
+            <button>Done</button>
+            <button>Pending</button>
+            <button>Redo</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. CREATE TEST / EXAM -->
+    <section class="accordion">
+      <button class="accordion-header">🧪 Create Test / Exam</button>
+      <div class="accordion-body">
+        <select>
+          <option>Select Subject / Class</option>
+        </select>
+        <input type="text" placeholder="Short description">
+        <input type="date">
+        <button class="submit">✔ Create</button>
+      </div>
+    </section>
+
+    <!-- 5. ASSIGNMENT MARKS -->
+    <section class="accordion">
+      <button class="accordion-header">📊 Assignment Marks</button>
+      <div class="accordion-body">
+
+        <button class="sub-accordion">Maths Homework 1</button>
+        <div class="sub-body">
+          <div class="register">
+            <span>Thando Langa</span>
+            <input type="number" placeholder="%">
+            <button>✔</button>
+            <button>✖</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. TEST / EXAM MARKS -->
+    <section class="accordion">
+      <button class="accordion-header">📈 Test / Exam Marks</button>
+      <div class="accordion-body">
+
+        <button class="sub-accordion">Maths Test 1</button>
+        <div class="sub-body">
+          <div class="register">
+            <span>Thando Langa</span>
+            <input type="number" placeholder="%">
+            <button>✔</button>
+            <button>✖</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. CREATE CLASS NOTIFICATION -->
+    <section class="accordion">
+      <button class="accordion-header">📢 Create Class Notification</button>
+      <div class="accordion-body">
+        <select>
+          <option>Select Class</option>
+        </select>
+        <textarea placeholder="Short message"></textarea>
+        <button class="submit">✔ Send</button>
+      </div>
+    </section>
+
+    <!-- 8. MANAGE NOTIFICATIONS -->
+    <section class="accordion">
+      <button class="accordion-header">📬 Notifications</button>
+      <div class="accordion-body">
+
+        <button class="sub-accordion">Grade 5 – Homework Reminder</button>
+        <div class="sub-body">
+          <textarea>Please ensure homework is completed by tomorrow.</textarea>
+          <div class="action-row">
+            <button class="submit">✔ Save</button>
+            <button class="danger">🗑 Delete</button>
+          </div>
+        </div>
+
+        <button class="sub-accordion">Grade 6 – Test Announcement</button>
+        <div class="sub-body">
+          <textarea>Maths test scheduled for Friday.</textarea>
+          <div class="action-row">
+            <button class="submit">✔ Save</button>
+            <button class="danger">🗑 Delete</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. TAKE DAY OFF -->
+    <section class="accordion">
+      <button class="accordion-header">🛑 Take the Day Off</button>
+      <div class="accordion-body">
+        <select>
+          <option>Delegate to Teacher</option>
+          <option>Ms Ndlovu</option>
+        </select>
+
+        <textarea placeholder="Custom message (optional)"></textarea>
+        <button class="submit">✔ Confirm</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JavaScript (js folder ONLY) -->
+  <script src="js/teacher.js"></script>
+
+</body>
+</html>

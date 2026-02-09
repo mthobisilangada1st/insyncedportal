@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Principal Dashboard</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="insyncEdportal.png" type="image/png" />
+  <link rel="shortcut icon" href="insyncEdportal.png" type="image/png" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="principalStyles.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <h1>Insync Principal</h1>
+
+  <div class="header-right">
+    <button id="themeBtn" class="theme-toggle">🌙</button>
+    <button id="logoutBtn" class="logout">Logout</button>
+  </div>
+</header>
+
+<!-- APP LAYOUT -->
+<div class="app">
+
+  <!-- SIDEBAR / NAV -->
+  <nav class="nav">
+    <a href="#">Overview</a>
+    <a href="#">Teachers</a>
+    <a href="#">Classes</a>
+    <a href="#">Parents & Learners</a>
+    <a href="#">Notifications</a>
+    <a href="#">Reports</a>
+    <a href="#">Settings</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- METRIC CARDS -->
+    <section class="card-grid">
+      <div class="metric-card">
+        <h3>Teachers</h3>
+        <p>24</p>
+      </div>
+      <div class="metric-card">
+        <h3>Classes</h3>
+        <p>18</p>
+      </div>
+      <div class="metric-card">
+        <h3>Parents</h3>
+        <p>420</p>
+      </div>
+      <div class="metric-card">
+        <h3>Learners</h3>
+        <p>560</p>
+      </div>
+    </section>
+
+    <!-- TEACHERS SECTION -->
+    <section class="accordion">
+      <button class="accordion-header">👩‍🏫 Teachers</button>
+      <div class="accordion-body">
+        <input type="text" placeholder="Teacher name" />
+        <input type="email" placeholder="Teacher email" />
+        <button class="submit">✔ Add Teacher</button>
+
+        <hr />
+
+        <button class="sub-accordion">Ms Ndlovu</button>
+        <div class="sub-body">
+          <select>
+            <option>Assign Subject</option>
+            <option>Maths</option>
+            <option>English</option>
+          </select>
+          <select>
+            <option>Assign Class</option>
+            <option>Grade 5A</option>
+            <option>Grade 6B</option>
+          </select>
+          <button class="submit">✔ Assign</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLASSES SECTION -->
+    <section class="accordion">
+      <button class="accordion-header">🏫 Classes</button>
+      <div class="accordion-body">
+        <input type="text" placeholder="Class name (e.g. Grade 5A)" />
+        <input type="text" placeholder="Subjects" />
+        <button class="submit">✔ Create</button>
+      </div>
+    </section>
+
+    <!-- PARENTS & LEARNERS SECTION -->
+    <section class="accordion">
+      <button class="accordion-header">👨‍👩‍👧 Parents & Learners</button>
+      <div class="accordion-body">
+        <input type="email" placeholder="Parent email" />
+        <input type="text" placeholder="Learner name" />
+        <select>
+          <option>Assign Class</option>
+          <option>Grade 5A</option>
+          <option>Grade 6B</option>
+        </select>
+        <button class="submit">📧 Send Invite</button>
+        <p class="hint">Temporary password will be emailed automatically.</p>
+      </div>
+    </section>
+
+    <!-- NOTIFICATIONS -->
+    <section class="accordion">
+      <button class="accordion-header">📢 Notifications Control</button>
+      <div class="accordion-body">
+        <p>Principals can manage school-wide notifications.</p>
+        <button class="danger">🗑 Clear Expired Notifications</button>
+      </div>
+    </section>
+
+    <!-- REPORTS -->
+    <section class="accordion">
+      <button class="accordion-header">📊 Reports</button>
+      <div class="accordion-body">
+        <p>View attendance, academic performance, and learner analytics.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="js/principal.js"></script>
+</body>
+</html>

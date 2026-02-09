@@ -1,0 +1,274 @@
+/* ========================================
+   VARIABLES
+======================================== */
+
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --card: #f0f2f5;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+  --danger: #dc2626;
+}
+
+body.dark {
+  --bg: #0b0f14;
+  --surface: #121826;
+  --card: #1a2234;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db; /* brighter for contrast */
+  --accent: #60a5fa;
+  --border: #2b3448;
+  --link-color: #93c5fd; /* optional for links in dark mode */
+}
+
+/* ========================================
+   RESET / GLOBAL
+======================================== */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Michroma', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+body.dark a {
+  color: var(--link-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Placeholder text */
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #d1d5db; /* brighter in dark mode */
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+  font-size: 1.4rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* ========================================
+   APP LAYOUT
+======================================== */
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.nav {
+  width: 220px;
+  background: var(--surface);
+  padding: 1rem;
+  border-right: 1px solid var(--border);
+}
+
+.nav a {
+  display: block;
+  padding: 0.75rem;
+  margin-bottom: 0.25rem;
+  border-radius: 6px;
+  color: var(--text-primary);
+}
+
+body.dark .nav a {
+  color: var(--text-primary);
+}
+
+.nav a:hover {
+  background: var(--card);
+}
+
+/* MAIN CONTENT */
+
+.container {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 1200px;
+}
+
+/* ========================================
+   CARDS & METRICS
+======================================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.metric-card h3 {
+  font-size: 1rem;
+}
+
+.metric-card p {
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+/* ========================================
+   ACCORDIONS
+======================================== */
+
+.accordion {
+  background: var(--card);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.accordion-header:hover {
+  background: var(--surface);
+}
+
+.accordion-body {
+  display: none;
+  padding: 1rem;
+  color: var(--text-secondary);
+}
+
+/* SUB-ACCORDION */
+
+.sub-accordion {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  background: var(--surface);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.sub-accordion:hover {
+  background: var(--card);
+}
+
+.sub-body {
+  display: none;
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   BUTTON SYSTEM
+======================================== */
+
+button {
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  font-size: 0.8rem;
+}
+
+button.primary,
+button.submit {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+button.danger,
+button.logout {
+  background: var(--danger);
+  color: #ffffff;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* ========================================
+   TEXT HIERARCHY
+======================================== */
+
+h1, h2, h3 {
+  color: var(--text-primary);
+}
+
+p, span, small, li {
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .nav {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Insync Login</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="insyncEdportal.png" type="image/png" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+  <!-- Login CSS (root folder) -->
+  <link rel="stylesheet" href="loginStyles.css">
+</head>
+
+<body>
+
+  <!-- PAGE WRAPPER (important for layout safety) -->
+  <div class="login-page">
+
+    <div class="login-container">
+
+      <!-- HEADER -->
+      <header class="login-header">
+        <h1>Insync Login</h1>
+        <button id="themeBtn" type="button" aria-label="Toggle theme">🌙</button>
+      </header>
+
+      <!-- FORM -->
+      <form id="loginForm" class="login-form">
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          required
+        />
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+
+        <select id="role" required>
+          <option value="">Select Role</option>
+          <option value="parent">Parent</option>
+          <option value="teacher">Teacher</option>
+          <option value="admin">Admin</option>
+          <option value="principal">Principal</option>
+        </select>
+
+        <button type="submit" class="submit">Login</button>
+
+        <p class="signup-link">
+          Don’t have an account?
+          <a href="signup.html">Sign up here</a>
+        </p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- JS (js folder ONLY) -->
+  <script src="js/login.js"></script>
+
+</body>
+</html>
