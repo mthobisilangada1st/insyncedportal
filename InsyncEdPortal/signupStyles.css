@@ -1,0 +1,142 @@
+/* ========================================
+   THEME VARIABLES
+======================================== */
+
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --card: #f0f2f5;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+}
+
+body.dark {
+  --bg: #0b0f14;
+  --surface: #121826;
+  --card: #1a2234;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --accent: #60a5fa;
+  --border: #2b3448;
+}
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Michroma', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* ========================================
+   SIGNUP PAGE LAYOUT
+======================================== */
+
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ========================================
+   SIGNUP CARD
+======================================== */
+
+.signup-container {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.signup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.signup-header h1 {
+  font-size: 1.6rem;
+  color: var(--text-primary);
+}
+
+/* ========================================
+   FORM ELEMENTS
+======================================== */
+
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 0.55rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.signup-form input::placeholder {
+  color: var(--text-secondary);
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* ========================================
+   PRIMARY ACTION
+======================================== */
+
+.signup-form .submit {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.signup-form .submit:hover {
+  opacity: 0.85;
+}
+
+/* ========================================
+   FOOTER LINK
+======================================== */
+
+.login-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.login-link a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,131 @@
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --card: #f0f2f5;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+}
+
+body.dark {
+  --bg: #0b0f14;
+  --surface: #121826;
+  --card: #1a2234;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --accent: #60a5fa;
+  --border: #2b3448;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Michroma', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.login-container {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Header */
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-header h1 {
+  font-size: 1.6rem;
+}
+
+/* Theme Button */
+#themeBtn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Form Fields */
+.login-form input,
+.login-form select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text-primary);
+}
+
+/* Remove ugly select defaults */
+.login-form select {
+  appearance: none;
+}
+
+/* Placeholders */
+.login-form input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Focus State */
+.login-form input:focus,
+.login-form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Submit Button */
+button.submit {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+button.submit:hover {
+  opacity: 0.9;
+}
+
+button.submit:active {
+  transform: scale(0.98);
+}
+
+/* Links */
+.signup-link {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--text-secondary);
+}
+
+.signup-link a {
+  color: var(--accent);
+  text-decoration: none;
+}

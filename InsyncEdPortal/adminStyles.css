@@ -1,0 +1,328 @@
+/* ========================================
+   DESIGN TOKENS
+======================================== */
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --card: #f0f2f5;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+}
+
+body.dark {
+  --bg: #0b0f14;
+  --surface: #121826;
+  --card: #1a2234;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --accent: #60a5fa;
+  --border: #2b3448;
+}
+
+/* ========================================
+   GLOBAL RESET
+======================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Michroma', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* ========================================
+   ACCESSIBILITY (FOCUS STATES)
+======================================== */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.3);
+}
+
+/* ========================================
+   HEADER
+======================================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+/* ========================================
+   APP LAYOUT
+======================================== */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.nav {
+  width: 220px;
+  background: var(--surface);
+  padding: 1rem;
+  border-right: 1px solid var(--border);
+}
+
+.nav a {
+  display: block;
+  padding: 0.75rem;
+  margin-bottom: 0.25rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.nav a:hover {
+  background: var(--card);
+}
+
+/* MAIN CONTENT */
+.container {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ========================================
+   CARDS & METRICS
+======================================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.metric-card h3 {
+  font-size: 1.1rem;
+}
+
+.metric-card p {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+/* ========================================
+   ACCORDIONS
+======================================== */
+.accordion {
+  background: var(--card);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.accordion-header:hover {
+  background: var(--surface);
+}
+
+.accordion.open .accordion-header {
+  background: var(--surface);
+}
+
+.accordion-body {
+  display: none;
+  padding: 1rem;
+  color: var(--text-secondary);
+}
+
+/* SUB-ACCORDIONS */
+.sub-accordion {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  background: var(--surface);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sub-accordion:hover {
+  background: var(--card);
+}
+
+.sub-body {
+  display: none;
+  padding: 0.75rem 1rem;
+}
+
+/* ========================================
+   FORM ELEMENTS
+======================================== */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+textarea {
+  min-height: 70px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+button {
+  cursor: pointer;
+  font-family: 'Michroma', sans-serif;
+}
+
+button.submit {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: opacity 0.2s;
+}
+
+button.submit:hover {
+  opacity: 0.85;
+}
+
+button.danger,
+button.logout {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: opacity 0.2s;
+}
+
+button.danger:hover,
+button.logout:hover {
+  opacity: 0.85;
+}
+
+/* ACTION ROWS */
+.action-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+/* ========================================
+   TEXT HIERARCHY
+======================================== */
+h1, h2, h3 {
+  color: var(--text-primary);
+}
+
+p, span, small, li {
+  color: var(--text-secondary);
+}
+
+.hint {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* ========================================
+   REGISTERS / INPUT GROUPS
+======================================== */
+.register {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.register input {
+  width: 60px;
+  padding: 0.25rem 0.5rem;
+}
+
+/* ========================================
+   STATUS TAGS
+======================================== */
+.present { color: #16a34a; }
+.absent  { color: #dc2626; }
+
+.pending,
+.done,
+.redo {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #111;
+}
+
+.pending { background: #ffefc2; }
+.done    { background: #c2ffd3; }
+.redo    { background: #ffc2c2; }
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .nav {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
